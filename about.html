@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAH.Laban - كاه لبن </title>
+     <link rel="icon" type="image/png" href="Images/KAH_Laban_Logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+  
+        .theme-blue {
+            background-color: #0066CC;
+        }
+        .font-rowdies {
+        font-family: 'Rowdies', sans-serif;
+    }
+        .theme-blue-text {
+            color: #0066CC;
+        }
+        .nav-scroll {
+            transition: all 0.3s ease;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #0066CC 0%, #004999 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,102,204,0.3);
+        }
+    </style>
+</head>
+<body class="bg-white">
+ <nav id="navbar" class="nav-scroll p-4 font-rowdies fixed w-full top-0 z-50 bg-[hsl(210,72%,50%)] shadow-md transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+    <div class="flex justify-between items-center h-20 gap-2">
+      <!-- Logo -->
+      <a href="index.html" class="flex-shrink-0 min-w-fit">
+        <div class="flex items-center gap-1 md:gap-2">
+          <div class="ml-0 rounded-2xl">
+            <img src="Images/KAH_Laban_Logo.png" alt="KAH Logo" width="50" height="50" class="w-12 h-12 md:w-16 md:h-16">
+          </div>
+          <div>
+            <p class="text-xl md:text-3xl font-rowdies text-white whitespace-nowrap">KAH.Laban - كاه لبن</p>
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Menu -->
+      <div class="hidden lg:flex items-center gap-8">
+        <a href="index.html" class="text-white font-rowdies hover:text-sky-200 transition font-medium text-sm">HOME</a>
+        <a href="menu.html" class="text-white font-rowdies hover:text-sky-200 transition font-medium text-sm">MENU</a>
+        <a href="about.html" class="text-white font-rowdies text-sm border-b-2 border-white">ABOUT US</a>
+        <a href="contact.html" class="text-white font-rowdies hover:text-sky-200 transition font-medium text-sm">CONTACT</a>
+      </div>
+
+      <!-- Right Icons -->
+      <div class="flex items-center gap-2 flex-shrink-0">
+        <!-- Search Icon (Visible on desktop, hidden on mobile) -->
+        <button id="search-btn" class="hidden lg:flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full border-2 border-white text-white hover:bg-white hover:text-sky-600 transition duration-300">
+          <svg class="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </button>
+
+        <!-- User Account Icon (Visible on desktop, hidden on mobile) -->
+        <button id="account-btn" class="hidden lg:flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full border-2 border-white text-white hover:bg-white hover:text-sky-600 transition duration-300">
+          <svg class="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+          </svg>
+        </button>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-full border-2 border-white text-white hover:bg-white hover:text-sky-600 transition duration-300">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="hidden lg:hidden mt-4 pt-4 border-t border-sky-500">
+      <div class="flex flex-col gap-4">
+        <a href="index.html" class="text-white font-rowdies hover:text-sky-200 transition font-medium text-sm pb-2">HOME</a>
+        <a href="menu.html" class="text-white font-rowdies hover:text-sky-200 transition font-medium text-sm pb-2">MENU</a>
+        <a href="about.html" class="text-white font-rowdies text-sm border-b-2 border-white pb-2">ABOUT US</a>
+        <a href="contact.html" class="text-white font-rowdies hover:text-sky-200 transition font-medium text-sm pb-2">CONTACT</a>
+        
+        <!-- Search and Account Icons in Mobile Menu -->
+        <div class="flex gap-2 pt-2">
+          <button id="search-btn-menu" class="flex items-center justify-center w-9 h-9 rounded-full border-2 border-white text-white hover:bg-white hover:text-sky-600 transition duration-300">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </button>
+          <button id="account-btn-menu" class="flex items-center justify-center w-9 h-9 rounded-full border-2 border-white text-white hover:bg-white hover:text-sky-600 transition duration-300">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+    <!-- Mobile Menu -->
+    
+
+    <!-- Header Section -->
+    <section class=" min-h-60 flex items-center justify-center mt-20 relative overflow-hidden pt-12">
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-5xl md:text-6xl font-rowdies text-[hsl(210,72%,50%)] mb-4">About KAH-Laban</h1>
+            <p class="text-xl text-gray-500">Preserving tradition, creating memories</p>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="py-16 flex md:py-24 bg-[hsl(210,72%,50%)]">
+        <div class="max-w-6xl ml-36 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div class="space-y-6">
+                <h2 class="text-3xl font-rowdies md:text-4xl font-black text-white">Our Story</h2>
+                <p class="text-slate-50 leading-relaxed text-justify">
+                    Our founder discovered the magic of traditional Mediterranean dairy creations—a creamy, indulgent delicacy that had been perfected over centuries. Inspired by these time-honored recipes and techniques, they saw an opportunity to reimagine this beloved treat for Sri Lankan palates. Rather than simply importing a foreign concept, we asked ourselves: How can we blend these ancient culinary traditions with the richness of Sri Lankan flavors and ingredients? This question became our mission.
+                </p>
+                <p class="text-slate-50 leading-relaxed text-justify">
+                   What started as a passion project in a small kitchen grew into something much larger. We sourced the finest local dairy, experimented with tropical spices, and worked tirelessly to perfect our craft. Our team traveled, learning from dairy experts and understanding the science behind creating the perfect creamy texture. By combining Mediterranean dairy heritage with Sri Lankan ingredients and innovation, KAH-Laban became more than just a product—it became a bridge between cultures, honoring traditions while celebrating our home.
+                </p>
+                
+            </div>
+            
+        </div>
+        <a href="index.html" class="-ml-72 -mr-60 mt-36 flex-shrink-0 min-w-fit">
+        <div class="grid items-center gap-1 md:gap-2">
+          <center><div class="ml-0 mb-10 rounded-2xl bg-white p-4 shadow-lg">
+            <img src="Images/KAH_Laban_Logo.png" alt="KAH Logo" class="w-16 h-16 md:w-32 md:h-32">
+          </div></center>
+          
+          <div>
+            <p class="text-2xl md:text-4xl font-rowdies text-white whitespace-nowrap">KAH.Laban - كاه لبن</p>
+          </div>
+        </div>
+      </a>
+    </section>
+
+  
+   
+
+
+    <!-- CTA Section -->
+    <section class="py-16 md:py-24 px-4 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-5xl font-rowdies text-[hsl(210,72%,50%)] mb-6">Ready to Experience KAH-Laban?</h2>
+            <p class="text-lg text-gray-600 mb-8">Whether you're looking for fresh sweets for everyday enjoyment or planning a special event, we're here to serve you</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="menu.html" class="bg-[hsl(210,72%,50%)] text- px-8 py-4 rounded-lg text-white font-rowdies hover:bg-blue-700 transition text-lg">
+                    Explore Our Menu
+                </a>
+                <a href="contact.html" class="border-2 border-[hsl(210,72%,50%)] text-[hsl(210,72%,50%)] px-8 py-4 rounded-lg font-rowdies hover:bg-blue-100 transition text-lg">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer class="bg-gray-900 text-white py-12 md:py-16 px-4">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 mb-8">
+    <!-- Logo -->
+    <a href="index.html" class="flex-shrink-0 min-w-fit">
+        <div class="grid items-center gap-1 md:gap-2">
+          <div class="ml-0 rounded-2xl">
+            <img src="Images/KAH_Laban_Logo.png" alt="KAH Logo" width="50" height="50" class="w-12 h-12 md:w-16 md:h-16">
+          </div>
+          
+          <div>
+            <p class="text-xl md:text-2xl font-rowdies text-white whitespace-nowrap">KAH.Laban - كاه لبن</p>
+          </div>
+        </div>
+      </a>
+
+    <!-- Quick Links -->
+    <div>
+      <h3 class="font-bold mb-4">Quick Links</h3>
+      <div class="space-y-2">
+        <a href="index.html" class="text-gray-400 hover:text-white transition">Home</a><br>
+        <a href="menu.html" class="text-gray-400 hover:text-white transition">Menu</a><br>
+        <a href="about.html" class="text-gray-400 hover:text-white transition">About Us</a><br>
+        <a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a><br>
+      </div>
+    </div>
+
+ 
+
+    <!-- Additional Info -->
+    <div>
+      <h3 class="font-bold mb-4">About Us</h3>
+      <p class="text-gray-400 text-sm">Crafting authentic Sri Lankan dairy products and confections with traditional recipes and premium ingredients.</p>
+    </div>
+     <!-- Social Media Icons with Animation -->
+<div class="flex gap-6 justify-center items-center py-8">
+  <!-- Facebook -->
+  <a href="https://www.facebook.com/share/17oQP8NqzM/?mibextid=wwXIfr" target="_blank" class="group relative">
+    <div class="w-10 h-10  rounded-2xl flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg">
+      <img src="Images/facebook.png" alt="">
+    </div>
+  </a>
+
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/kah.laban?igsh=MTJrczJlZjdweDZucQ==" target="_blank" class="group relative">
+    <div class="w-10 h-10  rounded-2xl flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg">
+      <img src="Images/instagram.png" alt="">
+    </div>
+  </a>
+
+  <!-- TikTok -->
+  <a href="https://www.tiktok.com/@kah.laban?_t=ZS-90hnWomJmF7&_r=1" target="_blank" class="group relative">
+    <div class="w-10 h-10 rounded-2xl flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg">
+     <img src="Images/tiktok.png" alt="">
+    </div>
+  </a>
+
+  
+
+  <!-- Phone -->
+  <a href="tel:+94761601600" class="group relative">
+    <div class="w-10 h-10 rounded-2xl flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg ">
+      <img src="Images/whatsapp.png" alt="">
+    </div>
+  </a>
+
+  <!-- Email -->
+  <a href="mailto:info@example.com" class="group relative">
+    <div class="w-10 h-10 rounded-2xl flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg ">
+     <img src="Images/mail.png" alt="">
+    </div>
+  </a>
+</div>
+  </div>
+
+  <!-- Bottom Footer -->
+  <div class="border-t border-gray-700 pt-4 -mb-10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+    <p>&copy; 2025 KAH-Laban. All rights reserved.</p>
+    <div class="flex gap-6">
+      <a href="#" class="hover:text-white transition">Privacy Policy</a>
+      <p>|</p>
+      <a href="#" class="hover:text-white transition">Terms of Service</a>
+    </div>
+    <p>Based in Sri Lanka</p>
+  </div>
+  
+</footer>
+
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
