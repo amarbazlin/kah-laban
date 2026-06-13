@@ -114,25 +114,25 @@
 </nav>
 
    
-<section class="min-h-screen flex items-center justify-center mt-20 relative overflow-hidden bg-white">
- <div class="w-full relative flex flex-col md:flex-row min-h-screen">
+<section class="flex items-center justify-center mt-20 relative overflow-hidden bg-white">
+ <div class="w-full relative flex flex-col md:flex-row min-h-[70vh] md:min-h-screen">
 <!-- Image Section (Left on Desktop, Top on Mobile) -->
-<div class="w-full md:w-1/2 min-h-screen md:h-screen relative overflow-hidden flex flex-col">
-<!-- Mobile: Slanted Bottom -->
-<img src="Images/main_image.jpg" alt="Dairy Products" class="w-full h-full object-cover md:hidden" style="clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);">
+<div class="w-full md:w-1/2 md:min-h-screen md:h-auto relative overflow-hidden flex flex-col">
+<!-- Mobile: Image with proper proportions, no full-screen -->
+<img src="Images/main_image.jpg" alt="Dairy Products" class="w-full h-[40vh] sm:h-[50vh] object-cover md:hidden">
 <!-- Desktop: Slanted Right Side -->
-<img src="Images/main_image.jpg" alt="Dairy Products" class="hidden md:block w-full h-full object-cover" style="clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);">
+<img src="Images/main_image.jpg" alt="Dairy Products" class="hidden md:block w-full h-full min-h-screen object-cover" style="clip-path: polygon(0 0, 85% 0, 100% 100%, 0 100%);">
 </div>
 <!-- Content Section (Right on Desktop, Bottom on Mobile) -->
-<div class="w-full md:w-1/2 md:h-screen bg-white flex items-center justify-center px-8 relative md:mt-0 -mt-[44vh]">
-<div class="space-y-8 max-w-lg">
-<h1 class="-mt-10 text-4xl md:text-5xl lg:text-6xl font-rowdies text-[hsl(210,72%,50%)] leading-tight">
+<div class="w-full md:w-1/2 bg-white flex items-center justify-center px-6 sm:px-8 py-8 md:py-0 md:min-h-screen">
+<div class="space-y-6 sm:space-y-8 max-w-lg">
+<h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-rowdies text-[hsl(210,72%,50%)] leading-tight">
  Discover a world of creamy dairy products and luscious confections with our brand.
 </h1>
-<p class="text-lg md:text-xl font-rowdies text-gray-700 leading-relaxed">
+<p class="text-base sm:text-lg md:text-xl font-rowdies text-gray-700 leading-relaxed">
  Indulge in the finest dairy products, made with love and fresh ingredients
 </p>
-<a href="menu.html" class="inline-block bg-orange-400 text-gray-800 px-8 py-4 rounded-lg font-bold hover:bg-orange-500 transition text-lg">
+<a href="menu.html" class="inline-block bg-orange-400 text-gray-800 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold hover:bg-orange-500 transition text-base sm:text-lg text-center">
  See Our Products →
 </a>
 </div>
