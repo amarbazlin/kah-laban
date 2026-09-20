@@ -65,19 +65,12 @@
 
       <!-- Right Icons -->
       <div class="flex items-center gap-2 flex-shrink-0">
-        <!-- Search Icon (Visible on desktop, hidden on mobile) -->
-        <button id="search-btn" class="hidden lg:flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full border-2 border-white text-white hover:bg-white hover:text-sky-600 transition duration-300">
-          <svg class="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-          </svg>
-        </button>
+        
+        
 
-        <!-- User Account Icon (Visible on desktop, hidden on mobile) -->
-        <!-- User Account Icon (Visible on desktop, hidden on mobile) -->
-<button id="account-btn" onclick="document.getElementById('newsletter').scrollIntoView({behavior: 'smooth'})" class="hidden lg:flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full border-2 border-white text-white hover:bg-white hover:text-sky-600 transition duration-300"> <svg class="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-          </svg>
-        </button>
+        
+        
+
 
         <!-- Mobile Menu Button -->
         <button id="mobile-menu-btn" class="lg:hidden flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-full border-2 border-white text-white hover:bg-white hover:text-sky-600 transition duration-300">
@@ -96,18 +89,9 @@
         <a href="about.html" class="text-white font-rowdies hover:text-sky-200 transition font-medium text-sm pb-2">ABOUT US</a>
         <a href="contact.html" class="text-white font-rowdies hover:text-sky-200 transition font-medium text-sm pb-2">CONTACT</a>
         
-        <!-- Search and Account Icons in Mobile Menu -->
-        <div id="search-container" class="hidden lg:flex items-center">
-  <input type="text" id="search-input" placeholder="Search products..." class="px-4 py-2 rounded-lg text-gray-800 w-48">
-  <button onclick="performSearch()" class="bg-white text-sky-600 px-4 py-2 rounded-lg ml-2 font-bold hover:bg-gray-100">
-    Search
-  </button>
-</div>
-<button id="search-btn" class="hidden lg:flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-full border-2 border-white text-white hover:bg-white hover:text-sky-600 transition duration-300" onclick="toggleSearch()">
-  <svg class="w-4 h-4 sm:w-4 sm:h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-  </svg>
-</button>
+        
+        
+
       </div>
     </div>
   </div>
@@ -145,15 +129,15 @@
         <div class="max-w-6xl mx-auto">
             <h2 class="text-4xl md:text-5xl font-rowdies mb-12 text-[hsl(210,72%,50%)]">Our Specialties</h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 md:gap-8">
                 <!-- Dubai Kunafa Melt -->
                 <div class="card-hover bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100">
                     <div class="aspect-square overflow-hidden bg-blue-50">
                         <img src="dubaikunafamelt.jpeg" alt="Dubai Kunafa Melt" class="w-full h-full object-cover hover:scale-105 transition duration-300">
                     </div>
-                    <div class="p-6 text-center">
-                        <h3 class="font-rowdies text-xl theme-blue-text mb-2">Dubai Kunafa Melt</h3>
-                        <p class="text-gray-600 text-sm mb-4">Authentic Dubai-style kunafa with melty pistachio-chocolate heart.</p>
+                    <div class="p-2 sm:p-6 text-center">
+                        <h3 class="font-rowdies text-sm sm:text-xl theme-blue-text mb-1 sm:mb-2">Dubai Kunafa Melt</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm mb-2 sm:mb-4">Authentic Dubai-style kunafa with melty pistachio-chocolate heart.</p>
                         <span class="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Dubai Special</span>
                     </div>
                 </div>
@@ -163,9 +147,9 @@
                     <div class="aspect-square overflow-hidden bg-blue-50">
                         <img src="dubaipistarocket.jpeg" alt="Dubai Pista Rocket" class="w-full h-full object-cover hover:scale-105 transition duration-300">
                     </div>
-                    <div class="p-6 text-center">
-                        <h3 class="font-rowdies text-xl theme-blue-text mb-2">Dubai Pista Rocket</h3>
-                        <p class="text-gray-600 text-sm mb-4">Crispy rocket pastry loaded with premium Dubai pistachio cream.</p>
+                    <div class="p-2 sm:p-6 text-center">
+                        <h3 class="font-rowdies text-sm sm:text-xl theme-blue-text mb-1 sm:mb-2">Dubai Pista Rocket</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm mb-2 sm:mb-4">Crispy rocket pastry loaded with premium Dubai pistachio cream.</p>
                         <span class="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Bestseller</span>
                     </div>
                 </div>
@@ -175,9 +159,9 @@
                     <div class="aspect-square overflow-hidden bg-blue-50">
                         <img src="cheesystrawberryblast.png" alt="Cheesy Strawberry Blast" class="w-full h-full object-cover hover:scale-105 transition duration-300">
                     </div>
-                    <div class="p-6 text-center">
-                        <h3 class="font-rowdies text-xl theme-blue-text mb-2">Cheesy Strawberry Blast</h3>
-                        <p class="text-gray-600 text-sm mb-4">Sweet strawberries blended with rich cheesy cream delight.</p>
+                    <div class="p-2 sm:p-6 text-center">
+                        <h3 class="font-rowdies text-sm sm:text-xl theme-blue-text mb-1 sm:mb-2">Cheesy Strawberry Blast</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm mb-2 sm:mb-4">Sweet strawberries blended with rich cheesy cream delight.</p>
                         <span class="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Fruity Favourite</span>
                     </div>
                 </div>
@@ -187,9 +171,9 @@
                     <div class="aspect-square overflow-hidden bg-blue-50">
                         <img src="biscoffcrunch.png" alt="Biscoff Crunch" class="w-full h-full object-cover hover:scale-105 transition duration-300">
                     </div>
-                    <div class="p-6 text-center">
-                        <h3 class="font-rowdies text-xl theme-blue-text mb-2">Biscoff Crunch</h3>
-                        <p class="text-gray-600 text-sm mb-4">Creamy Lotus Biscoff layers with crunchy biscuit crumble on top.</p>
+                    <div class="p-2 sm:p-6 text-center">
+                        <h3 class="font-rowdies text-sm sm:text-xl theme-blue-text mb-1 sm:mb-2">Biscoff Crunch</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm mb-2 sm:mb-4">Creamy Lotus Biscoff layers with crunchy biscuit crumble on top.</p>
                         <span class="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">Crowd Favourite</span>
                     </div>
                 </div>
@@ -483,25 +467,6 @@
     });
   });
     </script>
-    <script>
-  function toggleSearch() {
-    document.getElementById('search-container').classList.toggle('hidden');
-    document.getElementById('search-input').focus();
-  }
-
-  function performSearch() {
-    const query = document.getElementById('search-input').value;
-    if (query) {
-      window.location.href = `menu.html?search=${encodeURIComponent(query)}`;
-    }
-  }
-
-  // Allow Enter key to search
-  document.getElementById('search-input').addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-      performSearch();
-    }
-  });
-</script>
+    
 </body>
 </html>
