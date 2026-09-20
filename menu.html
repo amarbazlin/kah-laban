@@ -50,7 +50,7 @@
             <img src="Images/KAH_Laban_Logo.png" alt="KAH Logo" width="50" height="50" class="w-12 h-12 md:w-16 md:h-16">
           </div>
           <div>
-            <p class="text-xl md:text-3xl font-rowdies text-white whitespace-nowrap">KAH.Laban - كاه لبن</p>
+            <p class="text-xl md:text-3xl font-rowdies text-white whitespace-nowrap">KAH.Laban</p>
           </div>
         </div>
       </a>
@@ -124,10 +124,142 @@
     </section>
 
     <!-- Products Grid -->
-    
-    <section class="py-2 md:py-5  px-4 bg-white">
-      <img src="Images/menu.jpg" alt="menu" class="w-full h-full object-cover rounded-lg mb-8 shadow-md">
-        
+    <section class="py-8 md:py-12 px-4 bg-slate-50">
+      <div class="max-w-7xl mx-auto">
+        <!-- Search + Filter -->
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+          <div class="flex flex-wrap gap-2 justify-center">
+            <button data-filter="all" class="filter-btn active bg-white border border-blue-600 text-blue-600 px-5 py-2 rounded-full text-sm font-rowdies transition">All</button>
+            <button data-filter="chocolate" class="filter-btn bg-gray-200 text-gray-700 px-5 py-2 rounded-full text-sm font-rowdies transition">Chocolate</button>
+            <button data-filter="caramel" class="filter-btn bg-gray-200 text-gray-700 px-5 py-2 rounded-full text-sm font-rowdies transition">Caramel & Biscoff</button>
+            <button data-filter="fruity" class="filter-btn bg-gray-200 text-gray-700 px-5 py-2 rounded-full text-sm font-rowdies transition">Fruity & Cheesy</button>
+            <button data-filter="dubai" class="filter-btn bg-gray-200 text-gray-700 px-5 py-2 rounded-full text-sm font-rowdies transition">Dubai Special</button>
+          </div>
+          <div class="flex justify-center">
+            <input id="menu-search" type="text" placeholder="Search desserts..." class="w-full md:w-64 px-4 py-2 rounded-full border border-gray-300 text-sm">
+          </div>
+        </div>
+        <p id="no-results" class="hidden text-center text-gray-500 font-rowdies text-lg py-10">No desserts found. Try another search.</p>
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+                  <div class="product-item card-hover bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100" data-category="caramel" data-name="biscoff crunch">
+            <div class="aspect-square overflow-hidden bg-blue-50">
+              <img src="biscoffcrunch.png" alt="Biscoff Crunch" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="font-rowdies text-lg theme-blue-text mb-1">Biscoff Crunch</h3>
+              <p class="text-gray-600 text-sm">Creamy Lotus Biscoff layers with crunchy biscuit crumble on top.</p>
+            </div>
+          </div>
+          <div class="product-item card-hover bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100" data-category="caramel" data-name="caramel crunch">
+            <div class="aspect-square overflow-hidden bg-blue-50">
+              <img src="CARAMELCRUNCH.png" alt="Caramel Crunch" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="font-rowdies text-lg theme-blue-text mb-1">Caramel Crunch</h3>
+              <p class="text-gray-600 text-sm">Silky caramel cream with golden crunchy bits in every bite.</p>
+            </div>
+          </div>
+          <div class="product-item card-hover bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100" data-category="caramel" data-name="caramel flakes">
+            <div class="aspect-square overflow-hidden bg-blue-50">
+              <img src="caramelflakes.png" alt="Caramel Flakes" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="font-rowdies text-lg theme-blue-text mb-1">Caramel Flakes</h3>
+              <p class="text-gray-600 text-sm">Light caramel mousse topped with crispy chocolate flakes.</p>
+            </div>
+          </div>
+          <div class="product-item card-hover bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100" data-category="fruity" data-name="cheesy mango blast">
+            <div class="aspect-square overflow-hidden bg-blue-50">
+              <img src="cheesymangoblast.png" alt="Cheesy Mango Blast" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="font-rowdies text-lg theme-blue-text mb-1">Cheesy Mango Blast</h3>
+              <p class="text-gray-600 text-sm">Fresh mango meets creamy cheese for a tropical blast of flavour.</p>
+            </div>
+          </div>
+          <div class="product-item card-hover bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100" data-category="fruity" data-name="cheesy strawberry blast">
+            <div class="aspect-square overflow-hidden bg-blue-50">
+              <img src="cheesystrawberryblast.png" alt="Cheesy Strawberry Blast" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="font-rowdies text-lg theme-blue-text mb-1">Cheesy Strawberry Blast</h3>
+              <p class="text-gray-600 text-sm">Sweet strawberries blended with rich cheesy cream delight.</p>
+            </div>
+          </div>
+          <div class="product-item card-hover bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100" data-category="chocolate" data-name="choco flakes">
+            <div class="aspect-square overflow-hidden bg-blue-50">
+              <img src="chocoflakes.png" alt="Choco Flakes" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="font-rowdies text-lg theme-blue-text mb-1">Choco Flakes</h3>
+              <p class="text-gray-600 text-sm">Rich chocolate cream layered with crunchy choco flakes.</p>
+            </div>
+          </div>
+          <div class="product-item card-hover bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100" data-category="chocolate" data-name="choco spread cake">
+            <div class="aspect-square overflow-hidden bg-blue-50">
+              <img src="chocospreadcake.png" alt="Choco Spread Cake" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="font-rowdies text-lg theme-blue-text mb-1">Choco Spread Cake</h3>
+              <p class="text-gray-600 text-sm">Moist chocolate cake filled with smooth hazelnut spread.</p>
+            </div>
+          </div>
+          <div class="product-item card-hover bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100" data-category="dubai" data-name="dubai kunafa melt">
+            <div class="aspect-square overflow-hidden bg-blue-50">
+              <img src="dubaikunafamelt.jpeg" alt="Dubai Kunafa Melt" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="font-rowdies text-lg theme-blue-text mb-1">Dubai Kunafa Melt</h3>
+              <p class="text-gray-600 text-sm">Authentic Dubai-style kunafa with melty pistachio-chocolate heart.</p>
+            </div>
+          </div>
+          <div class="product-item card-hover bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100" data-category="dubai" data-name="dubai pista rocket">
+            <div class="aspect-square overflow-hidden bg-blue-50">
+              <img src="dubaipistarocket.jpeg" alt="Dubai Pista Rocket" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="font-rowdies text-lg theme-blue-text mb-1">Dubai Pista Rocket</h3>
+              <p class="text-gray-600 text-sm">Crispy rocket pastry loaded with premium Dubai pistachio cream.</p>
+            </div>
+          </div>
+          <div class="product-item card-hover bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100" data-category="chocolate" data-name="ferrero rocher">
+            <div class="aspect-square overflow-hidden bg-blue-50">
+              <img src="ferrerorocher.jpeg" alt="Ferrero Rocher" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="font-rowdies text-lg theme-blue-text mb-1">Ferrero Rocher</h3>
+              <p class="text-gray-600 text-sm">Luxury hazelnut-chocolate cup inspired by Ferrero Rocher.</p>
+            </div>
+          </div>
+          <div class="product-item card-hover bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100" data-category="fruity" data-name="mango melt cup">
+            <div class="aspect-square overflow-hidden bg-blue-50">
+              <img src="mangomeltcup.jpeg" alt="Mango Melt Cup" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="font-rowdies text-lg theme-blue-text mb-1">Mango Melt Cup</h3>
+              <p class="text-gray-600 text-sm">Chilled mango cream cup that melts in your mouth.</p>
+            </div>
+          </div>
+          <div class="product-item card-hover bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100" data-category="chocolate" data-name="oreo delight">
+            <div class="aspect-square overflow-hidden bg-blue-50">
+              <img src="oreodelight.png" alt="Oreo Delight" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="font-rowdies text-lg theme-blue-text mb-1">Oreo Delight</h3>
+              <p class="text-gray-600 text-sm">Cookies-and-cream layers with crushed Oreo crunch.</p>
+            </div>
+          </div>
+          <div class="product-item card-hover bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100" data-category="chocolate" data-name="pista choco swirl">
+            <div class="aspect-square overflow-hidden bg-blue-50">
+              <img src="pistachocoswirl.png" alt="Pista Choco Swirl" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+            </div>
+            <div class="p-5 text-center">
+              <h3 class="font-rowdies text-lg theme-blue-text mb-1">Pista Choco Swirl</h3>
+              <p class="text-gray-600 text-sm">Elegant swirl of pistachio cream and Belgian chocolate.</p>
+            </div>
+          </div>
+        </div>
+      </div>        
     </section>
 
     <!-- Bulk Order CTA -->
@@ -152,7 +284,7 @@
           </div>
           
           <div>
-            <p class="text-xl md:text-2xl font-rowdies text-white whitespace-nowrap">KAH.Laban - كاه لبن</p>
+            <p class="text-xl md:text-2xl font-rowdies text-white whitespace-nowrap">KAH.Laban</p>
           </div>
         </div>
       </a>
@@ -235,6 +367,9 @@
         const mobileMenu = document.getElementById('mobile-menu');
         const filterBtns = document.querySelectorAll('.filter-btn');
         const productItems = document.querySelectorAll('.product-item');
+        const searchInput = document.getElementById('menu-search');
+        const noResults = document.getElementById('no-results');
+        let activeFilter = 'all';
 
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
@@ -247,31 +382,41 @@
             });
         });
 
+        function applyFilters() {
+            const q = (searchInput.value || '').trim().toLowerCase();
+            let visible = 0;
+            productItems.forEach(item => {
+                const matchCat = activeFilter === 'all' || item.dataset.category === activeFilter;
+                const matchSearch = !q || (item.dataset.name || '').toLowerCase().includes(q);
+                const show = matchCat && matchSearch;
+                item.style.display = show ? 'block' : 'none';
+                if (show) visible++;
+            });
+            noResults.classList.toggle('hidden', visible !== 0);
+        }
+
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 filterBtns.forEach(b => {
                     b.classList.remove('active', 'bg-white', 'border', 'border-blue-600', 'text-blue-600');
                     b.classList.add('bg-gray-200', 'text-gray-700');
                 });
-                
                 btn.classList.remove('bg-gray-200', 'text-gray-700');
                 btn.classList.add('active', 'bg-white', 'border', 'border-blue-600', 'text-blue-600');
-
-                const filter = btn.dataset.filter;
-                
-                productItems.forEach(item => {
-                    if (filter === 'all') {
-                        item.style.display = 'block';
-                    } else {
-                        if (item.dataset.category === filter) {
-                            item.style.display = 'block';
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    }
-                });
+                activeFilter = btn.dataset.filter;
+                applyFilters();
             });
         });
+
+        searchInput.addEventListener('input', applyFilters);
+
+        // Support ?search= from homepage search bar
+        const params = new URLSearchParams(window.location.search);
+        const preset = params.get('search');
+        if (preset && searchInput) {
+            searchInput.value = preset;
+        }
+        applyFilters();
     </script>
 </body>
 </html>
